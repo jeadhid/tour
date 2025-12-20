@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerary Liburan Garut - Kampung Sampireun Edition</title>
+    <title>Itinerary Liburan Garut - Rainy Season Safe Mode</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f0fdf4; /* Light green bg */
+            background-color: #f0fdf4;
         }
         
         h1, h2, h3 {
@@ -40,6 +40,20 @@
             object-fit: cover;
             border-radius: 0.5rem;
         }
+
+        /* Rain/Safety Badge */
+        .safety-badge {
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -47,35 +61,59 @@
     <!-- Hero Section -->
     <div class="relative bg-emerald-900 text-white overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1533659828870-95ee305cee3e?q=80&w=2070&auto=format&fit=crop" alt="Garut Landscape" class="w-full h-full object-cover opacity-40">
+            <img src="https://images.unsplash.com/photo-1596401057633-565652f56878?q=80&w=2070&auto=format&fit=crop" alt="Garut Rain" class="w-full h-full object-cover opacity-30">
         </div>
-        <div class="relative max-w-2xl mx-auto px-6 py-20 text-center">
+        <div class="relative max-w-2xl mx-auto px-6 py-16 text-center">
             <span class="inline-block py-1 px-3 rounded-full bg-emerald-700/50 backdrop-blur-sm border border-emerald-500 text-emerald-100 text-sm font-medium mb-4">
-                <i class="fas fa-charging-station mr-2"></i>EV Friendly Trip
+                <i class="fas fa-cloud-showers-heavy mr-2"></i>Rainy Season Safe Trip
             </span>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Garut Escape</h1>
-            <p class="text-xl text-emerald-100 mb-2">24 – 28 Desember (5 Hari — 4 Malam)</p>
-            <p class="text-sm opacity-80">Jakarta ⇄ Garut • Base: Kampung Sampireun</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Garut: Situhapa & Sampireun</h1>
+            <p class="text-lg text-emerald-100 mb-2">24 – 28 Desember (5 Hari)</p>
+            <p class="text-xs opacity-80">Split Stay: Kebun Mawar Situhapa (1 Malam) + Kampung Sampireun (3 Malam)</p>
         </div>
     </div>
 
-    <!-- Hotel Highlight -->
-    <div class="max-w-3xl mx-auto px-4 -mt-10 relative z-10 mb-12">
-        <div class="glass-card rounded-2xl shadow-xl overflow-hidden p-6 bg-white">
-            <div class="flex flex-col md:flex-row gap-6 items-center">
-                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1000&auto=format&fit=crop" alt="Kampung Sampireun" class="w-full md:w-1/3 h-48 object-cover rounded-xl shadow-md">
-                <div class="flex-1">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-bold">AKOMODASI</span>
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
+    <!-- Safety Alert Section -->
+    <div class="max-w-2xl mx-auto px-4 -mt-6 relative z-10 mb-8">
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-md">
+            <div class="flex items-start">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-exclamation-triangle text-amber-500 mt-1"></i>
+                </div>
+                <div class="ml-3">
+                    <h3 class="text-sm font-bold text-amber-800">Peringatan Musim Hujan & Rute</h3>
+                    <div class="mt-1 text-sm text-amber-700">
+                        <p class="mb-1">Desember curah hujan tinggi. <strong>Hindari</strong> jalur Cukang Monteng (Kamojang) saat hujan lebat/kabut tebal.</p>
+                        <p>Papandayan dibatalkan demi keamanan (risiko jalan licin/longsor). Diganti dengan wisata kuliner & relaksasi.</p>
                     </div>
-                    <h2 class="text-2xl font-bold text-emerald-900 mb-2">Kampung Sampireun Resort & Spa</h2>
-                    <p class="text-slate-600 text-sm mb-4">Jl. Raya Samarang, Sukakarya, Garut.</p>
-                    <p class="text-slate-500 text-sm italic border-l-4 border-emerald-500 pl-3">
-                        "Menginap di bungalow atas danau dengan nuansa pedesaan Sunda yang tenang. Cocok untuk istirahat total setelah aktivitas seharian."
-                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accommodation 1 -->
+    <div class="max-w-3xl mx-auto px-4 mb-6">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-rose-100">
+            <div class="flex flex-col md:flex-row">
+                <img src="https://images.unsplash.com/photo-1558268739-c70e30349886?q=80&w=800&auto=format&fit=crop" class="w-full md:w-32 object-cover h-32 md:h-auto" alt="Situhapa">
+                <div class="p-4 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-rose-500 tracking-wide">AKOMODASI MALAM 1 (24 DES)</span>
+                    <h3 class="font-bold text-lg text-slate-800">Kebun Mawar Situhapa</h3>
+                    <p class="text-xs text-slate-600">Jl. Raya Kamojang KM 5, Samarang. Konsep taman bunga English garden. Udara sangat sejuk & berkabut.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accommodation 2 -->
+    <div class="max-w-3xl mx-auto px-4 mb-10">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden border border-emerald-100">
+            <div class="flex flex-col md:flex-row">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800&auto=format&fit=crop" class="w-full md:w-32 object-cover h-32 md:h-auto" alt="Sampireun">
+                <div class="p-4 flex flex-col justify-center">
+                    <span class="text-xs font-bold text-emerald-600 tracking-wide">AKOMODASI MALAM 2, 3, 4 (25-28 DES)</span>
+                    <h3 class="font-bold text-lg text-slate-800">Kampung Sampireun Resort</h3>
+                    <p class="text-xs text-slate-600">Jl. Raya Samarang. Pindah suasana ke bungalow danau yang tenang.</p>
                 </div>
             </div>
         </div>
@@ -87,54 +125,39 @@
 
         <!-- DAY 1 -->
         <div class="relative pl-0 md:pl-16 py-6 group">
-            <div class="hidden md:flex absolute left-0 top-6 w-12 h-12 bg-emerald-600 rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
+            <div class="hidden md:flex absolute left-0 top-6 w-12 h-12 bg-rose-500 rounded-full items-center justify-center text-white font-bold shadow-lg z-10">
                 24
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-emerald-100">
-                <div class="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex justify-between items-center">
-                    <h3 class="font-bold text-emerald-900"><i class="fas fa-car-side mr-2"></i>Hari 1: Perjalanan & Dinoland</h3>
-                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">Selasa, 24 Des</span>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
+                <div class="bg-rose-50 px-6 py-3 border-b border-rose-100 flex justify-between items-center">
+                    <h3 class="font-bold text-rose-900">Hari 1: Check-in Kebun Mawar</h3>
+                    <span class="text-xs font-semibold text-rose-600 bg-white px-2 py-1 rounded">24 Des</span>
                 </div>
                 <div class="p-6">
                     <ul class="space-y-4 relative border-l border-slate-200 ml-2 pl-6">
                         <li class="relative">
                             <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-slate-400">07:00 - 10:00 WIB</div>
-                            <p class="font-medium">Berangkat dari Jakarta</p>
-                            <p class="text-sm text-slate-600">Perjalanan santai via Tol Cipularang - Purbaleunyi. Hindari jam sibuk pagi.</p>
+                            <div class="time text-xs font-bold text-slate-400">07:00 - 11:30</div>
+                            <p class="font-medium">Jakarta → Rest Area KM 72/88</p>
+                            <p class="text-sm text-slate-600">Istirahat santai, ngopi, atau makan siang lebih awal di Rest Area Cipularang.</p>
                         </li>
                         <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white animate-pulse"></span>
-                            <div class="time text-xs font-bold text-blue-600">10:00 - 11:30 WIB</div>
-                            <p class="font-medium">Rest Area & Charging EV</p>
-                            <p class="text-sm text-slate-600">Isi daya di KM 72 / KM 88. Istirahat makan siang lebih awal.</p>
-                        </li>
-                        <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-emerald-600">14:00 WIB</div>
-                            <p class="font-medium">Check-in Kampung Sampireun</p>
-                            <p class="text-sm text-slate-600">Tiba di hotel, proses check-in, unpacking, dan sholat/istirahat sejenak.</p>
+                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-rose-500 border-2 border-white"></span>
+                            <div class="time text-xs font-bold text-rose-600">14:00</div>
+                            <p class="font-medium">Check-in Kebun Mawar Situhapa</p>
+                            <p class="text-sm text-slate-600">Nikmati teh sore di restoran kaca dengan pemandangan taman bunga. Hati-hati kabut sore.</p>
                         </li>
                         <li class="relative">
                             <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-slate-400">15:30 - 17:30 WIB</div>
-                            <p class="font-medium">Garut Dinoland</p>
-                            <p class="text-sm text-slate-600">Eksplorasi area Dinoland di Tarogong Kaler saat matahari tidak terlalu terik.</p>
-                        </li>
-                         <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-slate-400">19:00 WIB</div>
-                            <p class="font-medium">Makan Malam di Resort</p>
-                            <p class="text-sm text-slate-600">Menikmati suasana malam danau Sampireun.</p>
+                            <div class="time text-xs font-bold text-slate-400">16:00 - 18:00</div>
+                            <p class="font-medium">Jalan Santai di Taman / Dinoland (Opsional)</p>
+                            <p class="text-sm text-slate-600">Jika hujan, stay di hotel. Jika cerah, bisa turun sebentar ke Dinoland (Tarogong) atau cukup eksplor kebun mawar.</p>
                         </li>
                     </ul>
-                    
-                    <div class="mt-4 bg-blue-50 p-3 rounded-lg flex gap-3 items-start">
-                        <i class="fas fa-bolt text-blue-500 mt-1"></i>
-                        <div class="text-sm text-blue-900">
-                            <strong>EV Note:</strong> Jika baterai menipis saat sampai, bisa cari SPKLU di pusat kota Garut (PLN UP3 Garut) sebelum naik ke area resort Samarang.
-                        </div>
+                    <div class="safety-badge">
+                        <i class="fas fa-car"></i>
+                        <span>Akses ke Situhapa menanjak & sering berkabut. Gunakan gigi rendah saat turun & nyalakan lampu.</span>
                     </div>
                 </div>
             </div>
@@ -146,42 +169,36 @@
                 25
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-emerald-100">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
                 <div class="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex justify-between items-center">
-                    <h3 class="font-bold text-emerald-900"><i class="fas fa-mountain mr-2"></i>Hari 2: Darat (Utara/Barat)</h3>
-                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">Rabu, 25 Des</span>
+                    <h3 class="font-bold text-emerald-900">Hari 2: Pindah Hotel & Air Panas</h3>
+                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">25 Des</span>
                 </div>
                 <div class="p-6">
-                    <img src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=800&auto=format&fit=crop" alt="Hot Springs" class="img-cover mb-4">
-                    <div class="flex flex-col gap-4">
-                        <div class="flex gap-3">
-                            <div class="w-20 text-right text-xs font-bold text-emerald-600 pt-1">08:00 - 11:30</div>
-                            <div class="border-l-2 border-emerald-100 pl-4">
-                                <h4 class="font-bold">Darajat Pass</h4>
-                                <p class="text-sm text-slate-600">Berenang air panas & menikmati view. Berangkat setelah sarapan.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="w-20 text-right text-xs font-bold text-slate-400 pt-1">11:30 - 13:00</div>
-                            <div class="border-l-2 border-emerald-100 pl-4">
-                                <h4 class="font-bold">Makan Siang</h4>
-                                <p class="text-sm text-slate-600">Kuliner di sekitar area Pasirwangi atau Samarang.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="w-20 text-right text-xs font-bold text-emerald-600 pt-1">13:30 - 16:00</div>
-                            <div class="border-l-2 border-emerald-100 pl-4">
-                                <h4 class="font-bold">Kawah Kamojang</h4>
-                                <p class="text-sm text-slate-600">Eksplorasi Kawah Kereta Api & Hujan. Cuaca sore biasanya berkabut syahdu.</p>
-                            </div>
-                        </div>
-                         <div class="flex gap-3">
-                            <div class="w-20 text-right text-xs font-bold text-slate-400 pt-1">17:00</div>
-                            <div class="border-l-2 border-emerald-100 pl-4">
-                                <h4 class="font-bold">Kembali ke Hotel</h4>
-                                <p class="text-sm text-slate-600">Istirahat dan acara bebas di resort.</p>
-                            </div>
-                        </div>
+                    <ul class="space-y-4 relative border-l border-slate-200 ml-2 pl-6">
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">09:00 - 11:30</div>
+                            <p class="font-medium">Darajat Pass (Waterpark Air Panas)</p>
+                            <p class="text-sm text-slate-600">Dari Situhapa relatif dekat. Berendam air panas sangat pas saat cuaca dingin/gerimis.</p>
+                        </li>
+                         <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">12:00 - 13:30</div>
+                            <p class="font-medium">Makan Siang & Check-out Situhapa</p>
+                        </li>
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-emerald-600">14:00</div>
+                            <p class="font-medium">Check-in Kampung Sampireun</p>
+                            <p class="text-sm text-slate-600">Menuju Samarang bawah. Check-in dan istirahat.</p>
+                        </li>
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">15:30 - 17:00</div>
+                            <p class="font-medium">Kawah Kamojang (Tentatif)</p>
+                            <p class="text-sm text-slate-600"><strong>Note:</strong> Hanya pergi jika cuaca cerah. Jika hujan/kabut tebal, batalkan karena jalanan menanjak curam & jarak pandang nol.</p>
+                        </li>
+                    </ul>
+                    <div class="safety-badge">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Jalan Darajat & Kamojang curam/licin. Waspada rem panas saat turun.</span>
                     </div>
                 </div>
             </div>
@@ -193,40 +210,31 @@
                 26
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-emerald-100">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
                 <div class="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex justify-between items-center">
-                    <h3 class="font-bold text-emerald-900"><i class="fas fa-hiking mr-2"></i>Hari 3: Selatan (Papandayan)</h3>
-                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">Kamis, 26 Des</span>
+                    <h3 class="font-bold text-emerald-900">Hari 3: City Tour, Kuliner & Spa</h3>
+                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">26 Des (Plan Baru)</span>
                 </div>
                 <div class="p-6">
-                    <div class="flex items-start gap-4 mb-4">
-                        <div class="bg-orange-100 text-orange-600 p-3 rounded-lg">
-                            <i class="fas fa-clock text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="font-bold text-orange-800">Start Awal: 05:30 WIB</p>
-                            <p class="text-sm text-slate-600">Wajib berangkat pagi untuk menghindari macet jalur Cisurupan & dapat view cerah.</p>
-                        </div>
+                    <div class="bg-blue-50 p-3 rounded-lg mb-4 text-sm text-blue-800">
+                        <i class="fas fa-umbrella-beach mr-2"></i><strong>Pengganti Papandayan:</strong> Aktivitas santai & aman di area kota/resort.
                     </div>
 
-                    <img src="https://images.unsplash.com/photo-1621516790938-c6891632551f?q=80&w=800&auto=format&fit=crop" alt="Papandayan" class="img-cover mb-4">
-                    
-                    <ul class="space-y-3">
-                        <li class="flex gap-3 text-sm">
-                            <span class="font-bold min-w-[85px] text-slate-500">07:00 - 10:00</span>
-                            <span>Trekking Hutan Mati & Kawah Mas.</span>
+                    <ul class="space-y-4 relative border-l border-slate-200 ml-2 pl-6">
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">09:00 - 11:30</div>
+                            <p class="font-medium">Wisata Kota & Oleh-oleh</p>
+                            <p class="text-sm text-slate-600">Kunjungi galeri Chocodot (Cokelat Garut) atau pusat kulit Sukaregang (indoor/aman hujan).</p>
                         </li>
-                        <li class="flex gap-3 text-sm">
-                            <span class="font-bold min-w-[85px] text-slate-500">10:00 - 11:30</span>
-                            <span>Foto-foto di area Pondok Saladah/Edelweiss.</span>
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">12:00 - 13:30</div>
+                            <p class="font-medium">Wisata Kuliner</p>
+                            <p class="text-sm text-slate-600">Mencoba Baso Aci (Acay/Ceppy) atau Asem-asem Daging di area kota Garut yang jalannya datar & aman.</p>
                         </li>
-                        <li class="flex gap-3 text-sm">
-                            <span class="font-bold min-w-[85px] text-slate-500">12:00 - 13:30</span>
-                            <span>Makan siang di warung area parkir bawah (banyak jajanan).</span>
-                        </li>
-                         <li class="flex gap-3 text-sm">
-                            <span class="font-bold min-w-[85px] text-slate-500">14:00 - Selesai</span>
-                            <span>Kembali ke Kampung Sampireun. Spa time (opsional).</span>
+                        <li class="relative">
+                            <div class="time text-xs font-bold text-slate-400">15:00 - Selesai</div>
+                            <p class="font-medium">Spa & Relax di Sampireun</p>
+                            <p class="text-sm text-slate-600">Habiskan sore dengan Spa treatment atau memberi makan ikan dari balkon bungalow. Paling aman & rileks.</p>
                         </li>
                     </ul>
                 </div>
@@ -239,32 +247,22 @@
                 27
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-emerald-100">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
                 <div class="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex justify-between items-center">
-                    <h3 class="font-bold text-emerald-900"><i class="fas fa-water mr-2"></i>Hari 4: Timur (Danau)</h3>
-                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">Jumat, 27 Des</span>
+                    <h3 class="font-bold text-emerald-900">Hari 4: Talaga Bodas / Bagendit</h3>
+                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">27 Des</span>
                 </div>
                 <div class="p-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                            <div class="h-32 bg-slate-200 rounded-lg mb-3 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1596395817838-239c43d22cc7?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
-                                <span class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">08:30 - 10:30</span>
-                            </div>
-                            <h4 class="font-bold text-emerald-800">Situ Bagendit</h4>
-                            <p class="text-xs text-slate-600 mt-1">Datang pagi agar tidak terlalu panas saat naik rakit bambu.</p>
+                    <p class="text-sm text-slate-600 mb-3">Pilih satu destinasi utama tergantung cuaca pagi hari:</p>
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-slate-700">Opsi A (Cerah): Talaga Bodas</h4>
+                            <p class="text-xs text-slate-500">Kawah putih. Jalanan menuju Wanaraja cukup jauh tapi sudah cor beton. Hati-hati beberapa titik jalan sempit.</p>
                         </div>
-                        <div class="bg-slate-50 p-4 rounded-xl">
-                            <div class="h-32 bg-slate-200 rounded-lg mb-3 overflow-hidden relative">
-                                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
-                                <span class="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">13:30 - 15:30</span>
-                            </div>
-                            <h4 class="font-bold text-emerald-800">Talaga Bodas</h4>
-                            <p class="text-xs text-slate-600 mt-1">Jarak tempuh agak jauh, sampai sini siang/sore untuk foto kawah biru.</p>
+                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                            <h4 class="font-bold text-slate-700">Opsi B (Mendung): Situ Bagendit</h4>
+                            <p class="text-xs text-slate-500">Lebih dekat kota & dataran rendah. Risiko longsor minim. Bisa naik perahu atap tertutup.</p>
                         </div>
-                    </div>
-                    <div class="mt-4 text-center text-xs text-slate-500 italic">
-                        *Diselingi makan siang (11:30 - 12:30) di area Garut Kota atau Wanaraja.
                     </div>
                 </div>
             </div>
@@ -276,61 +274,27 @@
                 28
             </div>
             
-            <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-emerald-100">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
                 <div class="bg-emerald-50 px-6 py-3 border-b border-emerald-100 flex justify-between items-center">
-                    <h3 class="font-bold text-emerald-900"><i class="fas fa-home mr-2"></i>Hari 5: Pulang</h3>
-                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">Sabtu, 28 Des</span>
+                    <h3 class="font-bold text-emerald-900">Hari 5: Pulang</h3>
+                    <span class="text-xs font-semibold text-emerald-600 bg-white px-2 py-1 rounded">28 Des</span>
                 </div>
                 <div class="p-6">
-                     <ul class="space-y-4 relative border-l border-slate-200 ml-2 pl-6">
+                    <ul class="space-y-4 relative border-l border-slate-200 ml-2 pl-6">
                         <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-slate-400">08:00 - 09:30 WIB</div>
-                            <p class="font-medium">Check-out Hotel</p>
-                            <p class="text-sm text-slate-600">Sarapan terakhir, foto-foto, dan persiapan pulang.</p>
-                        </li>
-                         <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-200 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-slate-400">10:00 - 12:00 WIB</div>
-                            <p class="font-medium">Antapura De Djati</p>
-                            <p class="text-sm text-slate-600">Mampir di Cibiuk. Spot foto sawah & ngopi santai sebelum masuk jalan raya.</p>
+                            <div class="time text-xs font-bold text-slate-400">09:00 - 11:00</div>
+                            <p class="font-medium">Check-out & Antapura De Djati</p>
+                            <p class="text-sm text-slate-600">Cibiuk. Lokasi di lereng tapi tertata rapi. Aman dikunjungi asal tidak hujan badai.</p>
                         </li>
                         <li class="relative">
-                            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-500 border-2 border-white"></span>
-                            <div class="time text-xs font-bold text-blue-600">12:30 WIB - Selesai</div>
-                            <p class="font-medium">Perjalanan ke Jakarta</p>
-                            <p class="text-sm text-slate-600">Isi daya di Rest Area KM 166 (Cipali) atau KM 72/88 (Purbaleunyi) jika diperlukan.</p>
+                            <div class="time text-xs font-bold text-blue-600">12:00</div>
+                            <p class="font-medium">Menuju Tol (Pulang)</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- Footer Tips -->
-    <div class="bg-emerald-900 text-emerald-100 py-10 px-6">
-        <div class="max-w-2xl mx-auto">
-            <h3 class="font-playfair text-xl mb-4 text-white">Tips Perjalanan</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                <div>
-                    <h4 class="font-bold text-white mb-2"><i class="fas fa-suitcase mr-2"></i>Barang Bawaan</h4>
-                    <ul class="list-disc ml-5 space-y-1 text-emerald-200">
-                        <li>Jaket tebal (Papandayan & malam hari dingin).</li>
-                        <li>Sepatu nyaman untuk trekking.</li>
-                        <li>Masker (untuk area kawah belerang).</li>
-                        <li>Baju renang (jika ingin berendam air panas).</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-2"><i class="fas fa-plug mr-2"></i>Catatan EV</h4>
-                    <p class="text-emerald-200">Kampung Sampireun biasanya mengizinkan charging menggunakan portable charger (stop kontak biasa), namun <strong>wajib konfirmasi</strong> ke resepsionis sebelumnya untuk memastikan ketersediaan colokan yang dekat parkiran bungalow.</p>
-                </div>
-            </div>
-            <div class="mt-8 text-center border-t border-emerald-800 pt-6 text-xs text-emerald-400">
-                Generated by Gemini • Safe Travels!
-            </div>
-        </div>
     </div>
 
 </body>
