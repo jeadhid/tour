@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerary Liburan Garut - Culinary & Leisure</title>
+    <title>Itinerary Liburan Garut - Clean List</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -12,17 +12,18 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f8fafc;
+            color: #334155;
         }
         
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Custom Timeline Styles */
+        /* Timeline Styling */
         .timeline-container {
             border-left: 2px solid #e2e8f0;
             margin-left: 1rem;
-            padding-left: 2rem;
+            padding-left: 1.5rem;
             position: relative;
         }
 
@@ -31,342 +32,353 @@
             margin-bottom: 2rem;
         }
 
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
         .timeline-dot {
             position: absolute;
-            left: -2.6rem;
+            left: -1.95rem;
             top: 0.25rem;
-            width: 1.25rem;
-            height: 1.25rem;
+            width: 1rem;
+            height: 1rem;
             background-color: #fff;
-            border: 4px solid #10b981; /* Emerald-500 */
+            border: 3px solid #10b981;
             border-radius: 50%;
             z-index: 10;
         }
 
         .timeline-dot.secondary {
-            border-color: #64748b; /* Slate-500 */
+            border-color: #94a3b8;
         }
 
-        .culinary-card {
-            background: linear-gradient(to right bottom, #fff7ed, #ffedd5);
+        .timeline-dot.highlight {
+            border-color: #f43f5e;
+        }
+
+        /* Button Styling */
+        .btn-map {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background-color: #f1f5f9;
+            color: #475569;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: 1px solid #e2e8f0;
+            margin-top: 0.5rem;
+        }
+        .btn-map:hover {
+            background-color: #e2e8f0;
+            color: #1e293b;
+        }
+        .btn-map.primary {
+            background-color: #ecfdf5;
+            color: #059669;
+            border-color: #d1fae5;
+        }
+        .btn-map.primary:hover {
+            background-color: #d1fae5;
+        }
+
+        .culinary-box {
+            background: #fff7ed;
             border-left: 4px solid #f97316;
-        }
-
-        .safety-badge {
-            background-color: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #991b1b;
-            padding: 0.75rem;
+            padding: 1rem;
             border-radius: 0.5rem;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
+            margin-top: 1.5rem;
         }
     </style>
 </head>
-<body class="text-slate-700">
+<body class="bg-slate-50">
 
-    <!-- Hero Section -->
-    <div class="relative bg-emerald-900 text-white overflow-hidden pb-10">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1596401057633-565652f56878?q=80&w=2070&auto=format&fit=crop" alt="Garut Rain" class="w-full h-full object-cover opacity-20">
-        </div>
-        <div class="relative max-w-3xl mx-auto px-6 pt-20 text-center">
-            <span class="inline-block py-1 px-4 rounded-full bg-emerald-800/80 backdrop-blur border border-emerald-500 text-emerald-100 text-xs font-bold tracking-wider mb-4 uppercase">
-                24 - 28 Desember
-            </span>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Garut Leisure Trip</h1>
-            <p class="text-lg text-emerald-100 font-light">Wisata Alam Aman & Jelajah Kuliner Legend</p>
+    <!-- Hero Header (No Image, Gradient Only) -->
+    <div class="relative bg-gradient-to-br from-emerald-800 to-teal-600 text-white py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full border border-white/30 text-xs font-bold tracking-wider mb-6 uppercase">
+                24 - 28 Desember 2024
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Garut Family Trip</h1>
+            <p class="text-lg text-emerald-100 font-light">
+                Panduan Perjalanan
+            </p>
         </div>
     </div>
 
-    <!-- Safety Alert Section -->
-    <div class="max-w-3xl mx-auto px-4 -mt-8 relative z-20 mb-10">
-        <div class="bg-white border border-amber-200 p-5 rounded-xl shadow-lg flex flex-col md:flex-row gap-4 items-center md:items-start">
-            <div class="bg-amber-100 p-3 rounded-full text-amber-600">
+    <!-- Safety Warning -->
+    <div class="max-w-3xl mx-auto px-4 -mt-8 relative z-30 mb-12">
+        <div class="bg-white border-l-4 border-amber-500 p-6 rounded-r-xl shadow-lg flex items-start gap-4">
+            <div class="bg-amber-100 p-3 rounded-full text-amber-600 shrink-0">
                 <i class="fas fa-umbrella text-xl"></i>
             </div>
             <div>
-                <h3 class="font-bold text-amber-900">Mode Musim Hujan Aktif</h3>
-                <p class="text-sm text-slate-600 mt-1">
-                    Itinerary ini telah disesuaikan untuk menghindari area rawan longsor/licin ekstrem (seperti Trekking Papandayan). Fokus dialihkan ke <strong>Staycation, City Tour, & Wisata Kuliner</strong> yang aman dijangkau mobil.
+                <h3 class="font-bold text-lg text-slate-800">Mode Musim Hujan</h3>
+                <p class="text-slate-600 text-sm mt-1">
+                    Jadwal disesuaikan agar aman untuk keluarga. Fokus pada kuliner, relaksasi, dan wisata dalam ruangan/aman.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- Accommodation Summary -->
-    <div class="max-w-3xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-        <!-- Hotel 1 -->
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-rose-100 flex items-center gap-4">
-            <img src="https://images.unsplash.com/photo-1558268739-c70e30349886?q=80&w=200&auto=format&fit=crop" class="w-16 h-16 rounded-lg object-cover">
-            <div>
-                <span class="text-[10px] font-bold text-rose-500 uppercase">Malam 1 (24 Des)</span>
-                <h4 class="font-bold text-slate-800 leading-tight">Kebun Mawar Situhapa</h4>
-                <p class="text-xs text-slate-500">Samarang Atas (Sejuk & Berbunga)</p>
-            </div>
-        </div>
-        <!-- Hotel 2 -->
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-emerald-100 flex items-center gap-4">
-            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=200&auto=format&fit=crop" class="w-16 h-16 rounded-lg object-cover">
-            <div>
-                <span class="text-[10px] font-bold text-emerald-600 uppercase">Malam 2-4 (25-28 Des)</span>
-                <h4 class="font-bold text-slate-800 leading-tight">Kampung Sampireun</h4>
-                <p class="text-xs text-slate-500">Samarang Bawah (Danau & Spa)</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN TIMELINE -->
-    <div class="max-w-3xl mx-auto px-4 pb-20">
+    <!-- Main Itinerary Content -->
+    <div class="max-w-3xl mx-auto px-4 pb-20 space-y-12">
 
         <!-- HARI 1 -->
-        <div class="mb-12">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-rose-500 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold shadow-md">24</div>
-                <h2 class="text-xl font-bold text-slate-800">Perjalanan & Check-in Situhapa</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-rose-500 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-rose-200">24</div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">Check-in Situhapa</h2>
+                    <p class="text-slate-500">Selasa • Perjalanan & Taman Bunga</p>
+                </div>
             </div>
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                 <div class="timeline-container">
                     <div class="timeline-item">
                         <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">07:00 - 12:00</span>
-                        <h4 class="font-bold text-slate-800">Jakarta → Garut</h4>
-                        <p class="text-sm text-slate-600">Perjalanan santai via Tol Cipularang. Keluar Tol Cileunyi -> Nagreg -> Kadungora.</p>
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-slate-800">Berangkat dari Jakarta</h4>
+                            <span class="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-500">07:00</span>
+                        </div>
+                        <p class="text-sm text-slate-500">Via Tol Cipularang → Keluar Cileunyi → Nagreg → Kadungora.</p>
                     </div>
+                    
                     <div class="timeline-item">
-                        <div class="timeline-dot" style="border-color: #f43f5e;"></div>
-                        <span class="text-sm font-bold text-rose-500">14:00</span>
-                        <h4 class="font-bold text-slate-800">Check-in Kebun Mawar Situhapa</h4>
-                        <p class="text-sm text-slate-600">Menikmati *Welcome Drink*. Sore hari bisa eksplor taman labirin dan kebun bunga mawar di area hotel.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">19:00</span>
-                        <h4 class="font-bold text-slate-800">Makan Malam</h4>
-                        <p class="text-sm text-slate-600">Disarankan makan di restoran hotel karena akses jalan malam cukup gelap dan berkabut.</p>
+                        <div class="timeline-dot highlight"></div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h4 class="font-bold text-rose-600">Kebun Mawar Situhapa</h4>
+                            <span class="text-xs font-bold bg-rose-100 text-rose-600 px-2 py-1 rounded">14:00</span>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-2">
+                            Check-in, istirahat, dan eksplorasi taman bunga. Udara sejuk dan berkabut sore hari.
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kebun+Mawar+Situhapa+Garut" target="_blank" class="btn-map primary">
+                            <i class="fas fa-map-marker-alt"></i> Buka Google Maps
+                        </a>
                     </div>
                 </div>
 
-                <!-- KULINER DAY 1 -->
-                <div class="culinary-card p-4 rounded-xl mt-6">
-                    <h4 class="font-bold text-orange-800 flex items-center gap-2 mb-3">
-                        <i class="fas fa-utensils"></i> Rekomendasi Kuliner (Arah Datang)
-                    </h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">RM Asep Stroberi (Kadungora)</strong>
-                            <span class="text-xs text-slate-500">Nasi Liwet viral dengan pemandangan sawah. Cocok untuk makan siang sebelum naik ke Garut.</span>
+                <div class="culinary-box">
+                    <h5 class="font-bold text-orange-800 mb-2 text-sm uppercase flex items-center gap-2">
+                        <i class="fas fa-utensils"></i> Rekomendasi Makan Siang
+                    </h5>
+                    <div class="flex justify-between items-center bg-white p-3 rounded border border-orange-100">
+                        <div>
+                            <strong class="text-sm text-slate-800 block">RM Asep Stroberi (Kadungora)</strong>
+                            <span class="text-xs text-slate-500">Nasi Liwet khas Garut.</span>
                         </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Sate Maranggi Pa' Nur</strong>
-                            <span class="text-xs text-slate-500">Jalan Raya Samarang. Alternatif jika lapar saat sudah dekat area hotel.</span>
-                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Asep+Stroberi+Kadungora" target="_blank" class="text-orange-500 hover:text-orange-600"><i class="fas fa-location-arrow fa-lg"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- HARI 2 -->
-        <div class="mb-12">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-emerald-600 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold shadow-md">25</div>
-                <h2 class="text-xl font-bold text-slate-800">Pindah Hotel & Air Panas</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-emerald-200">25</div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">Pindah ke Sampireun</h2>
+                    <p class="text-slate-500">Rabu • Air Panas & Danau</p>
+                </div>
             </div>
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                 <div class="timeline-container">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <span class="text-sm font-bold text-emerald-600">09:30</span>
-                        <h4 class="font-bold text-slate-800">Darajat Pass</h4>
-                        <p class="text-sm text-slate-600">Berenang air panas. Paling enak saat cuaca gerimis/dingin. Tiket masuk terjangkau.</p>
+                        <h4 class="font-bold text-slate-800">Darajat Pass (Pagi)</h4>
+                        <p class="text-sm text-slate-600 mb-2">Berenang air panas alami. Sangat nyaman jika cuaca dingin/gerimis.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Darajat+Pass+Waterpark" target="_blank" class="btn-map">
+                            <i class="fas fa-map-pin"></i> Lokasi
+                        </a>
                     </div>
+                    
                     <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">12:30</span>
-                        <h4 class="font-bold text-slate-800">Check-out & Makan Siang</h4>
-                        <p class="text-sm text-slate-600">Pindah dari Situhapa menuju area bawah (Samarang).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="text-sm font-bold text-emerald-600">14:00</span>
-                        <h4 class="font-bold text-slate-800">Check-in Kampung Sampireun</h4>
-                        <p class="text-sm text-slate-600">Istirahat di bungalow. Sore hari naik perahu kayu mengelilingi danau resort (gratis fasilitas hotel).</p>
-                    </div>
-                </div>
-
-                <!-- KULINER DAY 2 -->
-                <div class="culinary-card p-4 rounded-xl mt-6">
-                    <h4 class="font-bold text-orange-800 flex items-center gap-2 mb-3">
-                        <i class="fas fa-utensils"></i> Rekomendasi Kuliner (Area Samarang)
-                    </h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">RM Muara Sunda</strong>
-                            <span class="text-xs text-slate-500">Restoran Sunda modern & bersih. Menu andalan: Gurame Terbang & Karedok.</span>
-                        </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Rumah Makan Lumbung Padi</strong>
-                            <span class="text-xs text-slate-500">Suasana saung di tengah sawah. Sambal dadak-nya juara.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- HARI 3 -->
-        <div class="mb-12">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-emerald-600 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold shadow-md">26</div>
-                <h2 class="text-xl font-bold text-slate-800">Garut City Tour & Kuliner Legend</h2>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                <div class="bg-blue-50 text-blue-800 p-3 rounded-lg mb-6 text-sm flex gap-2">
-                    <i class="fas fa-info-circle mt-1"></i>
-                    <div>
-                        <strong>Pengganti Papandayan:</strong> Hari ini kita turun ke Kota Garut (dataran rendah) untuk wisata belanja & kuliner yang aman dari hujan.
-                    </div>
-                </div>
-
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">10:00 - 11:30</span>
-                        <h4 class="font-bold text-slate-800">Pusat Kulit Sukaregang</h4>
-                        <p class="text-sm text-slate-600">Wisata belanja jaket, tas, dan sepatu kulit asli Garut. Toko rekomendasi: <em>Astiga</em> atau <em>Garvis</em> (kualitas premium).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">11:30 - 13:00</span>
-                        <h4 class="font-bold text-slate-800">Chocodot World / Batik Garutan</h4>
-                        <p class="text-sm text-slate-600">Beli oleh-oleh cokelat dodol unik. Atau mampir ke <em>Batik Garutan RM</em> untuk kain batik tulis khas.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">13:00 - 15:00</span>
-                        <h4 class="font-bold text-slate-800">Wisata Kuliner Viral</h4>
-                        <p class="text-sm text-slate-600">Makan siang di pusat kota (lihat rekomendasi di bawah).</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="text-sm font-bold text-emerald-600">16:00</span>
-                        <h4 class="font-bold text-slate-800">Spa di Sampireun</h4>
-                        <p class="text-sm text-slate-600">Kembali ke hotel untuk relaksasi spa kaki atau pijat tradisional.</p>
-                    </div>
-                </div>
-
-                <!-- KULINER DAY 3 -->
-                <div class="culinary-card p-4 rounded-xl mt-6">
-                    <h4 class="font-bold text-orange-800 flex items-center gap-2 mb-3">
-                        <i class="fas fa-star"></i> Kuliner Wajib Coba (Pusat Kota)
-                    </h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Baso Aci Cecep / Acay</strong>
-                            <span class="text-xs text-slate-500">Legendanya baso aci. Kuah pedas gurih dengan topping sukro cikur. Wajib coba!</span>
-                        </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Sate Domba H. Dedi / Sari Bahari</strong>
-                            <span class="text-xs text-slate-500">Daging domba Garut yang empuk dan manis. Disajikan di atas hotplate.</span>
-                        </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Soto Ayam Ahri</strong>
-                            <span class="text-xs text-slate-500">Soto santan kuning legendaris di area Pasar Baru/Mandalagiri.</span>
-                        </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Es Goyobod Alun-Alun</strong>
-                            <span class="text-xs text-slate-500">Minuman segar tradisional dari tepung hunkwe.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- HARI 4 -->
-        <div class="mb-12">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-emerald-600 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold shadow-md">27</div>
-                <h2 class="text-xl font-bold text-slate-800">Wisata Danau & Santai</h2>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <span class="text-sm font-bold text-emerald-600">Pagi</span>
-                        <h4 class="font-bold text-slate-800">Opsi A: Talaga Bodas (Jika Cerah)</h4>
-                        <p class="text-sm text-slate-600">Kawah putih biru. Pemandangan instagramable. Jalanan agak jauh ke arah Wanaraja.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">Alternatif</span>
-                        <h4 class="font-bold text-slate-800">Opsi B: Situ Bagendit (Jika Mendung)</h4>
-                        <p class="text-sm text-slate-600">Lebih dekat dan aman. Naik rakit bambu santai.</p>
-                    </div>
-                </div>
-
-                <!-- KULINER DAY 4 -->
-                <div class="culinary-card p-4 rounded-xl mt-6">
-                    <h4 class="font-bold text-orange-800 flex items-center gap-2 mb-3">
-                        <i class="fas fa-utensils"></i> Rekomendasi Kuliner (Wanaraja/Banyuresmi)
-                    </h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                         <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">Mie Bakso Parahyangan</strong>
-                            <span class="text-xs text-slate-500">Mie yamin manis/asin legendaris di Garut. Tekstur mie-nya khas.</span>
-                        </div>
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">RM Cibiuk (Cabang Garut)</strong>
-                            <span class="text-xs text-slate-500">Aman dan nyaman untuk keluarga besar dengan menu Sunda lengkap.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- HARI 5 -->
-        <div class="mb-12">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-emerald-600 text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold shadow-md">28</div>
-                <h2 class="text-xl font-bold text-slate-800">Check-out & Pulang</h2>
-            </div>
-            
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-                <div class="timeline-container">
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">10:00</span>
-                        <h4 class="font-bold text-slate-800">Antapura De Djati</h4>
-                        <p class="text-sm text-slate-600">Mampir di Cibiuk (arah pulang). Ngopi di tengah sawah terasering ala Ubud. Spot foto terakhir sebelum masuk tol.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot secondary"></div>
-                        <span class="text-sm font-bold text-slate-400">12:30</span>
-                        <h4 class="font-bold text-slate-800">Perjalanan ke Jakarta</h4>
-                        <p class="text-sm text-slate-600">Via Limbangan/Nagreg - Masuk Tol Cileunyi.</p>
+                        <div class="timeline-dot highlight"></div>
+                        <h4 class="font-bold text-emerald-700">Check-in Kampung Sampireun</h4>
+                        <p class="text-sm text-slate-600 mb-2">
+                            Menginap di bungalow atas danau. Aktivitas sore: Naik perahu kayu (gratis) keliling danau dan memberi makan ikan.
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kampung+Sampireun+Resort" target="_blank" class="btn-map primary">
+                            <i class="fas fa-bed"></i> Lokasi Hotel
+                        </a>
                     </div>
                 </div>
                 
-                 <!-- KULINER DAY 5 -->
-                <div class="culinary-card p-4 rounded-xl mt-6">
-                    <h4 class="font-bold text-orange-800 flex items-center gap-2 mb-3">
-                        <i class="fas fa-utensils"></i> Kuliner Terakhir (Cibiuk)
-                    </h4>
-                    <div class="grid grid-cols-1 gap-3 text-sm">
-                        <div class="bg-white/60 p-2 rounded">
-                            <strong class="block text-slate-800">RM Khas Sunda Cibiuk (Pusat)</strong>
-                            <span class="text-xs text-slate-500">Wajib beli sambal Cibiuk yang khas (hijau) untuk oleh-oleh atau makan siang sebelum perjalanan jauh.</span>
+                <div class="culinary-box">
+                    <h5 class="font-bold text-orange-800 mb-2 text-sm uppercase flex items-center gap-2">
+                        <i class="fas fa-utensils"></i> Makan Siang Sekitar
+                    </h5>
+                    <div class="flex justify-between items-center bg-white p-3 rounded border border-orange-100">
+                        <div>
+                            <strong class="text-sm text-slate-800 block">RM Muara Sunda</strong>
+                            <span class="text-xs text-slate-500">Resto modern, bersih, menu Gurame juara.</span>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=RM+Muara+Sunda" target="_blank" class="text-orange-500 hover:text-orange-600"><i class="fas fa-location-arrow fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HARI 3 -->
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200">26</div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">City Tour & Kuliner</h2>
+                    <p class="text-slate-500">Kamis • Belanja & Jajan Legend</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot secondary"></div>
+                        <h4 class="font-bold text-slate-800">Sentra Kulit Sukaregang</h4>
+                        <p class="text-sm text-slate-600 mb-2">Pusat kerajinan kulit asli (Jaket, Tas, Sepatu). Harga grosir.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sentra+Kulit+Sukaregang" target="_blank" class="btn-map">
+                            <i class="fas fa-shopping-bag"></i> Peta Lokasi
+                        </a>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot secondary"></div>
+                        <h4 class="font-bold text-slate-800">Chocodot World</h4>
+                        <p class="text-sm text-slate-600 mb-2">Oleh-oleh "Cokelat Dodol" ikonik Garut. Toko tematik yang unik.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Chocodot+World+Garut" target="_blank" class="btn-map">
+                            <i class="fas fa-gift"></i> Peta Lokasi
+                        </a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot highlight"></div>
+                        <h4 class="font-bold text-rose-600">Wisata Kuliner Wajib (Siang)</h4>
+                        <p class="text-sm text-slate-600 mb-3">Pilih salah satu legenda kuliner:</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Baso+Aci+Cecep" target="_blank" class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100 p-3 rounded border border-slate-200 transition">
+                                <div class="bg-red-100 text-red-500 w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-pepper-hot"></i></div>
+                                <div>
+                                    <strong class="text-sm text-slate-800 block">Baso Aci Cecep</strong>
+                                    <span class="text-xs text-slate-500">Pedas nampol, topping sukro.</span>
+                                </div>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sate+Domba+Sari+Bahari" target="_blank" class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100 p-3 rounded border border-slate-200 transition">
+                                <div class="bg-amber-100 text-amber-500 w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-drumstick-bite"></i></div>
+                                <div>
+                                    <strong class="text-sm text-slate-800 block">Sate Domba Sari Bahari</strong>
+                                    <span class="text-xs text-slate-500">Empuk, hotplate.</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <!-- HARI 4 -->
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-cyan-200">27</div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">Wisata Danau</h2>
+                    <p class="text-slate-500">Jumat • Pilih Sesuai Cuaca</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-bold text-slate-800">Pilihan Destinasi Pagi</h4>
+                        <div class="mt-3 space-y-3">
+                            <div class="bg-cyan-50 p-3 rounded-lg border border-cyan-100">
+                                <div class="flex justify-between items-center mb-1">
+                                    <strong class="text-cyan-900 text-sm">OPSI A: Talaga Bodas (Jika Cerah)</strong>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Talaga+Bodas+Garut" target="_blank" class="text-cyan-600 hover:text-cyan-800"><i class="fas fa-map-marker-alt"></i></a>
+                                </div>
+                                <p class="text-xs text-cyan-800">Kawah vulkanik putih & air biru tosca. Pemandangan sangat bagus tapi jalan agak jauh.</p>
+                            </div>
+                            
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                <div class="flex justify-between items-center mb-1">
+                                    <strong class="text-slate-800 text-sm">OPSI B: Situ Bagendit (Jika Mendung)</strong>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Situ+Bagendit+Garut" target="_blank" class="text-slate-500 hover:text-slate-700"><i class="fas fa-map-marker-alt"></i></a>
+                                </div>
+                                <p class="text-xs text-slate-600">Danau luas, bisa naik rakit bambu santai. Lokasi lebih dekat kota & aman.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="culinary-box">
+                    <h5 class="font-bold text-orange-800 mb-2 text-sm uppercase flex items-center gap-2">
+                        <i class="fas fa-utensils"></i> Makan Siang
+                    </h5>
+                    <div class="flex justify-between items-center bg-white p-3 rounded border border-orange-100">
+                        <div>
+                            <strong class="text-sm text-slate-800 block">Mie Bakso Parahyangan</strong>
+                            <span class="text-xs text-slate-500">Mie Yamin legendaris. Tekstur mie khas.</span>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mie+Bakso+Parahyangan+Garut" target="_blank" class="text-orange-500 hover:text-orange-600"><i class="fas fa-location-arrow fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HARI 5 -->
+        <section>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">28</div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">Pulang & Antapura</h2>
+                    <p class="text-slate-500">Sabtu • Vibes Ubud di Garut</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot secondary"></div>
+                        <h4 class="font-bold text-slate-800">Check-out (10:00)</h4>
+                        <p class="text-sm text-slate-600">Perjalanan pulang arah Jakarta via jalur Cibiuk.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot highlight"></div>
+                        <h4 class="font-bold text-slate-800">Antapura De Djati</h4>
+                        <p class="text-sm text-slate-600 mb-2">
+                            Tempat ngopi di tengah sawah terasering. Mirip Ubud Bali. Spot santai sebelum masuk tol.
+                        </p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Antapura+De+Djati" target="_blank" class="btn-map primary">
+                            <i class="fas fa-coffee"></i> Peta Lokasi
+                        </a>
+                    </div>
+
+                     <div class="timeline-item">
+                        <div class="timeline-dot secondary"></div>
+                        <h4 class="font-bold text-slate-800">Oleh-oleh: Sambal Cibiuk</h4>
+                        <p class="text-sm text-slate-600 mb-2">Mampir di <strong>RM Cibiuk Pusat</strong> untuk beli sambal hijau khas.</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=RM+Cibiuk+Pusat" target="_blank" class="btn-map">
+                            <i class="fas fa-store"></i> Lokasi Toko
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="border-t border-slate-200 mt-12 py-8 text-center bg-white">
+        <p class="text-slate-500 font-bold mb-1">Safe Travels!</p>
+        <p class="text-xs text-slate-400">Garut Family Itinerary</p>
     </div>
 
 </body>
