@@ -125,15 +125,14 @@
         </div>
     </div>
 
-    <!-- WEATHER INSIGHTS SECTION (NEW) -->
     <div class="max-w-3xl mx-auto px-4 -mt-8 relative z-40 mb-8">
         <div class="bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden">
             <div class="bg-blue-50/50 p-4 border-b border-blue-100 flex justify-between items-center">
                 <h3 class="font-bold text-blue-900 flex items-center gap-2">
-                    <i class="fas fa-cloud-showers-heavy text-blue-500"></i> Weather Forecast
+                    <i class="fas fa-cloud-sun text-blue-500"></i> Weather Forecast Detail
                 </h3>
-                <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-bold">
-                    Garut, 24-28 Des '25
+                <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-bold uppercase">
+                    Garut & Samarang Area
                 </span>
             </div>
             
@@ -141,55 +140,67 @@
                 <div class="flex items-center gap-4 mb-4 text-sm text-slate-600 bg-slate-50 p-3 rounded-lg">
                     <div class="flex items-center gap-2">
                         <i class="fas fa-temperature-low text-rose-400"></i>
-                        <span><strong>17°C - 24°C</strong> (Sejuk)</span>
+                        <span>Rentang Suhu: <strong>17°C - 24°C</strong></span>
                     </div>
                     <div class="h-4 w-px bg-slate-300"></div>
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-tint text-blue-400"></i>
-                        <span>Kelembapan <strong>85%</strong></span>
+                        <i class="fas fa-umbrella text-blue-400"></i>
+                        <span>Probabilitas Hujan: <strong>80-90%</strong></span>
                     </div>
                 </div>
 
                 <!-- Daily Forecast Cards -->
                 <div class="weather-scroll">
                     <!-- 24 Des -->
-                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase">Rabu 24</span>
+                    <div class="min-w-[120px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">24 Des</span>
                         <i class="fas fa-bolt text-amber-500 text-xl my-2"></i>
-                        <span class="text-xs font-bold text-slate-700">24°C</span>
-                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Petir</span>
+                        <div class="flex gap-2 mb-1">
+                            <span class="temp-badge bg-rose-50 text-rose-600">24°</span>
+                            <span class="temp-badge bg-blue-50 text-blue-600">18°</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 leading-tight">Hujan Petir (Sore)</span>
                     </div>
                     <!-- 25 Des -->
-                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase">Kamis 25</span>
+                    <div class="min-w-[120px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">25 Des</span>
                         <i class="fas fa-bolt text-amber-500 text-xl my-2"></i>
-                        <span class="text-xs font-bold text-slate-700">24°C</span>
-                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Petir</span>
+                        <div class="flex gap-2 mb-1">
+                            <span class="temp-badge bg-rose-50 text-rose-600">24°</span>
+                            <span class="temp-badge bg-blue-50 text-blue-600">18°</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 leading-tight">Hujan Petir (Siang)</span>
                     </div>
                     <!-- 26 Des -->
-                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase">Jumat 26</span>
+                    <div class="min-w-[120px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">26 Des</span>
                         <i class="fas fa-cloud-rain text-blue-500 text-xl my-2"></i>
-                        <span class="text-xs font-bold text-slate-700">23°C</span>
-                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Ringan</span>
+                        <div class="flex gap-2 mb-1">
+                            <span class="temp-badge bg-rose-50 text-rose-600">23°</span>
+                            <span class="temp-badge bg-blue-50 text-blue-600">17°</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 leading-tight">Hujan Ringan</span>
                     </div>
                     <!-- 27 Des -->
-                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase">Sabtu 27</span>
+                    <div class="min-w-[120px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">27 Des</span>
                         <i class="fas fa-cloud-sun-rain text-blue-400 text-xl my-2"></i>
-                        <span class="text-xs font-bold text-slate-700">23°C</span>
-                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Reda</span>
+                        <div class="flex gap-2 mb-1">
+                            <span class="temp-badge bg-rose-50 text-rose-600">23°</span>
+                            <span class="temp-badge bg-blue-50 text-blue-600">17°</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 leading-tight">Berawan & Hujan</span>
                     </div>
                     <!-- 28 Des -->
-                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase">Minggu 28</span>
+                    <div class="min-w-[120px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">28 Des</span>
                         <i class="fas fa-cloud text-slate-400 text-xl my-2"></i>
-                        <span class="text-xs font-bold text-slate-700">24°C</span>
-                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Berawan</span>
+                        <div class="flex gap-2 mb-1">
+                            <span class="temp-badge bg-rose-50 text-rose-600">24°</span>
+                            <span class="temp-badge bg-blue-50 text-blue-600">18°</span>
+                        </div>
+                        <span class="text-[10px] text-slate-500 leading-tight">Mendung Tipis</span>
                     </div>
-                </div>
-                <div class="mt-2 text-[10px] text-right text-slate-400 italic">
-                    Data: Google Weather / BMKG Forecast 2025
                 </div>
             </div>
         </div>
