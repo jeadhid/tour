@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itinerary Liburan Garut - Clean List</title>
+    <title>Itinerary Liburan Garut - Family & Weather</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -17,6 +17,22 @@
         
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
+        }
+
+        /* Weather Card Styling */
+        .weather-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding-bottom: 0.5rem;
+            scrollbar-width: thin;
+        }
+        .weather-scroll::-webkit-scrollbar {
+            height: 4px;
+        }
+        .weather-scroll::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
         }
 
         /* Timeline Styling */
@@ -96,57 +112,112 @@
 </head>
 <body class="bg-slate-50">
 
-    <!-- Hero Header (No Image, Gradient Only) -->
-    <div class="relative bg-gradient-to-br from-emerald-800 to-teal-600 text-white py-20 px-4 text-center">
+    <!-- Hero Header -->
+    <div class="relative bg-gradient-to-br from-emerald-900 to-teal-700 text-white py-16 px-4 text-center">
         <div class="max-w-3xl mx-auto">
-            <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full border border-white/30 text-xs font-bold tracking-wider mb-6 uppercase">
-                24 - 28 Desember 2024
+            <div class="inline-block bg-white/10 backdrop-blur-md px-4 py-1 rounded-full border border-white/20 text-xs font-bold tracking-wider mb-6 uppercase">
+                24 - 28 Desember 2025
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Garut Family Trip</h1>
-            <p class="text-lg text-emerald-100 font-light">
-                Panduan Perjalanan Keluarga & Kuliner
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Garut Family Trip</h1>
+            <p class="text-emerald-100 font-light text-sm">
+                Relax & Culinary • Weather-Ready Itinerary
             </p>
         </div>
     </div>
 
-    <!-- Overview & Checklist Section (NEW) -->
-    <div class="max-w-3xl mx-auto px-4 -mt-8 relative z-30 mb-8">
-        <!-- Safety Alert -->
-        <div class="bg-white border-l-4 border-amber-500 p-6 rounded-r-xl shadow-lg flex items-start gap-4 mb-6">
-            <div class="bg-amber-100 p-3 rounded-full text-amber-600 shrink-0">
-                <i class="fas fa-umbrella text-xl"></i>
+    <!-- WEATHER INSIGHTS SECTION (NEW) -->
+    <div class="max-w-3xl mx-auto px-4 -mt-8 relative z-40 mb-8">
+        <div class="bg-white rounded-xl shadow-xl border border-blue-100 overflow-hidden">
+            <div class="bg-blue-50/50 p-4 border-b border-blue-100 flex justify-between items-center">
+                <h3 class="font-bold text-blue-900 flex items-center gap-2">
+                    <i class="fas fa-cloud-showers-heavy text-blue-500"></i> Weather Forecast
+                </h3>
+                <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-bold">
+                    Garut, 24-28 Des '25
+                </span>
             </div>
-            <div>
-                <h3 class="font-bold text-lg text-slate-800">Mode Musim Hujan</h3>
-                <p class="text-slate-600 text-sm mt-1">
-                    Jadwal disesuaikan agar aman untuk keluarga. Trekking Papandayan diganti dengan wisata kuliner & relaksasi.
-                </p>
+            
+            <div class="p-4">
+                <div class="flex items-center gap-4 mb-4 text-sm text-slate-600 bg-slate-50 p-3 rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-temperature-low text-rose-400"></i>
+                        <span><strong>17°C - 24°C</strong> (Sejuk)</span>
+                    </div>
+                    <div class="h-4 w-px bg-slate-300"></div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-tint text-blue-400"></i>
+                        <span>Kelembapan <strong>85%</strong></span>
+                    </div>
+                </div>
+
+                <!-- Daily Forecast Cards -->
+                <div class="weather-scroll">
+                    <!-- 24 Des -->
+                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Rabu 24</span>
+                        <i class="fas fa-bolt text-amber-500 text-xl my-2"></i>
+                        <span class="text-xs font-bold text-slate-700">24°C</span>
+                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Petir</span>
+                    </div>
+                    <!-- 25 Des -->
+                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Kamis 25</span>
+                        <i class="fas fa-bolt text-amber-500 text-xl my-2"></i>
+                        <span class="text-xs font-bold text-slate-700">24°C</span>
+                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Petir</span>
+                    </div>
+                    <!-- 26 Des -->
+                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Jumat 26</span>
+                        <i class="fas fa-cloud-rain text-blue-500 text-xl my-2"></i>
+                        <span class="text-xs font-bold text-slate-700">23°C</span>
+                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Ringan</span>
+                    </div>
+                    <!-- 27 Des -->
+                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Sabtu 27</span>
+                        <i class="fas fa-cloud-sun-rain text-blue-400 text-xl my-2"></i>
+                        <span class="text-xs font-bold text-slate-700">23°C</span>
+                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Hujan Reda</span>
+                    </div>
+                    <!-- 28 Des -->
+                    <div class="min-w-[100px] bg-white border border-slate-200 rounded-lg p-3 text-center flex flex-col items-center shadow-sm">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase">Minggu 28</span>
+                        <i class="fas fa-cloud text-slate-400 text-xl my-2"></i>
+                        <span class="text-xs font-bold text-slate-700">24°C</span>
+                        <span class="text-[10px] text-slate-500 leading-tight mt-1">Berawan</span>
+                    </div>
+                </div>
+                <div class="mt-2 text-[10px] text-right text-slate-400 italic">
+                    Data: Google Weather / BMKG Forecast 2025
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- Trip Overview & Packing List -->
+    <!-- Trip Overview & Checklist -->
+    <div class="max-w-3xl mx-auto px-4 mb-10">
         <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
             <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                <i class="fas fa-suitcase-rolling text-emerald-600"></i> Persiapan Perjalanan
+                <i class="fas fa-suitcase-rolling text-emerald-600"></i> Trip Overview & Checklist
             </h2>
             
             <p class="text-slate-600 mb-6 text-sm leading-relaxed border-b border-slate-100 pb-4">
-                Trip ini bertema <strong>Relax & Culinary</strong>. Kita akan menikmati udara sejuk Situhapa (mirip Lembang), menginap di tepi danau Sampireun, berendam air panas, dan berburu makanan enak. Tidak ada aktivitas fisik berat.
+                Trip ini bertema <strong>Relax & Culinary</strong>. Karena prediksi cuaca didominasi hujan (85% chance), aktivitas difokuskan pada relaksasi di resort, wisata kuliner, dan tempat yang aman dari risiko longsor.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Checklist Barang -->
                 <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
                     <h3 class="font-bold text-slate-700 mb-3 text-xs uppercase tracking-wide flex items-center gap-2">
-                        <i class="fas fa-check-circle text-emerald-500"></i> Barang Wajib Bawa
+                        <i class="fas fa-check-circle text-emerald-500"></i> Wajib Bawa (Edisi Hujan)
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-600">
-                        <li class="flex items-start gap-2"><i class="fas fa-snowflake text-sky-400 mt-1 w-4"></i> <span>Jaket Tebal/Hoodie (Malam 16-18°C)</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-cloud-showers-heavy text-slate-400 mt-1 w-4"></i> <span>Payung Lipat/Jas Hujan</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-shoe-prints text-amber-600 mt-1 w-4"></i> <span>Sepatu Jalan Nyaman (Sneakers)</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-medkit text-rose-400 mt-1 w-4"></i> <span>Obat Pribadi & Vitamin</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-money-bill-wave text-emerald-600 mt-1 w-4"></i> <span>Uang Tunai Kecil (Parkir/Tip)</span></li>
-                        <li class="flex items-start gap-2"><i class="fas fa-plug text-slate-500 mt-1 w-4"></i> <span>Colokan Sambung (Kabel roll)</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-umbrella text-blue-500 mt-1 w-4"></i> <span><strong>Payung Besar/Jas Hujan</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-shoe-prints text-amber-700 mt-1 w-4"></i> <span><strong>Sandal Karet/Sepatu Waterproof</strong> (Jalanan basah)</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-snowflake text-sky-400 mt-1 w-4"></i> <span>Jaket Tebal (Suhu drop ke 17°C saat hujan)</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-medkit text-rose-400 mt-1 w-4"></i> <span>Tolak Angin/Minyak Kayu Putih</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-mobile-alt text-slate-500 mt-1 w-4"></i> <span>Powerbank (Jaga-jaga mati lampu saat petir)</span></li>
                     </ul>
                 </div>
 
@@ -157,24 +228,16 @@
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li class="flex justify-between items-center border-b border-slate-200 pb-1 border-dashed">
-                            <span>👕 Baju Jalan (Siang)</span> 
-                            <span class="font-bold text-slate-800 bg-white px-2 rounded">5-6 Stel</span>
+                            <span>👕 Baju Jalan (Bahan Cepat Kering)</span> 
+                            <span class="font-bold text-slate-800 bg-white px-2 rounded">6 Stel</span>
                         </li>
                         <li class="flex justify-between items-center border-b border-slate-200 pb-1 border-dashed">
-                            <span>🌙 Baju Tidur (Hangat)</span> 
-                            <span class="font-bold text-slate-800 bg-white px-2 rounded">2-3 Stel</span>
+                            <span>🌙 Baju Tidur (Hangat/Panjang)</span> 
+                            <span class="font-bold text-slate-800 bg-white px-2 rounded">3 Stel</span>
                         </li>
                         <li class="flex justify-between items-center border-b border-slate-200 pb-1 border-dashed">
-                            <span>👙 Baju Renang</span> 
-                            <span class="font-bold text-slate-800 bg-white px-2 rounded">1 Stel</span>
-                        </li>
-                        <li class="flex justify-between items-center border-b border-slate-200 pb-1 border-dashed">
-                            <span>🧥 Jaket / Outer</span> 
-                            <span class="font-bold text-slate-800 bg-white px-2 rounded">1-2 Pcs</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>🧦 Dalaman & Kaos Kaki</span> 
-                            <span class="font-bold text-slate-800 bg-white px-2 rounded">6-7 Stel</span>
+                            <span>🧥 Sweater / Cardigan</span> 
+                            <span class="font-bold text-slate-800 bg-white px-2 rounded">2 Pcs</span>
                         </li>
                     </ul>
                 </div>
@@ -191,7 +254,7 @@
                 <div class="w-12 h-12 bg-rose-500 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-rose-200">24</div>
                 <div>
                     <h2 class="text-2xl font-bold text-slate-800">Check-in Situhapa</h2>
-                    <p class="text-slate-500">Selasa • Perjalanan & Taman Bunga</p>
+                    <p class="text-slate-500">Rabu • ⛈️ Hujan Petir Sore</p>
                 </div>
             </div>
 
@@ -203,7 +266,7 @@
                             <h4 class="font-bold text-slate-800">Berangkat dari Jakarta</h4>
                             <span class="text-xs font-bold bg-slate-100 px-2 py-1 rounded text-slate-500">07:00</span>
                         </div>
-                        <p class="text-sm text-slate-500">Via Tol Cipularang → Keluar Cileunyi → Nagreg → Kadungora.</p>
+                        <p class="text-sm text-slate-500">Via Tol Cipularang → Keluar Cileunyi → Nagreg → Kadungora. (Jalan pagi sebelum hujan turun siang hari).</p>
                     </div>
                     
                     <div class="timeline-item">
@@ -213,7 +276,7 @@
                             <span class="text-xs font-bold bg-rose-100 text-rose-600 px-2 py-1 rounded">14:00</span>
                         </div>
                         <p class="text-sm text-slate-600 mb-2">
-                            Check-in, istirahat, dan eksplorasi taman bunga. Udara sejuk dan berkabut sore hari.
+                            Check-in. Segera eksplor taman saat sampai jika belum hujan. Sore diprediksi hujan petir, nikmati teh hangat di resto kaca.
                         </p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Kebun+Mawar+Situhapa+Garut" target="_blank" class="btn-map primary">
                             <i class="fas fa-map-marker-alt"></i> Buka Google Maps
@@ -242,7 +305,7 @@
                 <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-emerald-200">25</div>
                 <div>
                     <h2 class="text-2xl font-bold text-slate-800">Pindah ke Sampireun</h2>
-                    <p class="text-slate-500">Rabu • Air Panas & Danau</p>
+                    <p class="text-slate-500">Kamis • ⛈️ Hujan Petir Sore</p>
                 </div>
             </div>
 
@@ -251,7 +314,7 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <h4 class="font-bold text-slate-800">Darajat Pass (Pagi)</h4>
-                        <p class="text-sm text-slate-600 mb-2">Berenang air panas alami. Sangat nyaman jika cuaca dingin/gerimis.</p>
+                        <p class="text-sm text-slate-600 mb-2">Manfaatkan waktu pagi (biasanya mendung/berawan tapi belum hujan deras) untuk berenang air panas.</p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Darajat+Pass+Waterpark" target="_blank" class="btn-map">
                             <i class="fas fa-map-pin"></i> Lokasi
                         </a>
@@ -261,7 +324,7 @@
                         <div class="timeline-dot highlight"></div>
                         <h4 class="font-bold text-emerald-700">Check-in Kampung Sampireun</h4>
                         <p class="text-sm text-slate-600 mb-2">
-                            Menginap di bungalow atas danau. Aktivitas sore: Naik perahu kayu (gratis) keliling danau dan memberi makan ikan.
+                            Aktivitas perahu sebaiknya dilakukan pagi esoknya atau saat hujan reda sejenak. Malam hari stay di bungalow (risiko hujan).
                         </p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Kampung+Sampireun+Resort" target="_blank" class="btn-map primary">
                             <i class="fas fa-bed"></i> Lokasi Hotel
@@ -290,7 +353,7 @@
                 <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200">26</div>
                 <div>
                     <h2 class="text-2xl font-bold text-slate-800">City Tour & Kuliner</h2>
-                    <p class="text-slate-500">Kamis • Belanja & Jajan Legend</p>
+                    <p class="text-slate-500">Jumat • 🌧️ Hujan Ringan</p>
                 </div>
             </div>
 
@@ -299,7 +362,7 @@
                     <div class="timeline-item">
                         <div class="timeline-dot secondary"></div>
                         <h4 class="font-bold text-slate-800">Sentra Kulit Sukaregang</h4>
-                        <p class="text-sm text-slate-600 mb-2">Pusat kerajinan kulit asli (Jaket, Tas, Sepatu). Harga grosir.</p>
+                        <p class="text-sm text-slate-600 mb-2">Belanja indoor, aman dari hujan.</p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Sentra+Kulit+Sukaregang" target="_blank" class="btn-map">
                             <i class="fas fa-shopping-bag"></i> Peta Lokasi
                         </a>
@@ -308,7 +371,7 @@
                     <div class="timeline-item">
                         <div class="timeline-dot secondary"></div>
                         <h4 class="font-bold text-slate-800">Chocodot World</h4>
-                        <p class="text-sm text-slate-600 mb-2">Oleh-oleh "Cokelat Dodol" ikonik Garut. Toko tematik yang unik.</p>
+                        <p class="text-sm text-slate-600 mb-2">Oleh-oleh "Cokelat Dodol" ikonik Garut.</p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Chocodot+World+Garut" target="_blank" class="btn-map">
                             <i class="fas fa-gift"></i> Peta Lokasi
                         </a>
@@ -317,14 +380,14 @@
                     <div class="timeline-item">
                         <div class="timeline-dot highlight"></div>
                         <h4 class="font-bold text-rose-600">Wisata Kuliner Wajib (Siang)</h4>
-                        <p class="text-sm text-slate-600 mb-3">Pilih salah satu legenda kuliner:</p>
+                        <p class="text-sm text-slate-600 mb-3">Makanan berkuah panas sangat pas dengan cuaca 23°C:</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <a href="https://www.google.com/maps/search/?api=1&query=Baso+Aci+Cecep" target="_blank" class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100 p-3 rounded border border-slate-200 transition">
                                 <div class="bg-red-100 text-red-500 w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-pepper-hot"></i></div>
                                 <div>
                                     <strong class="text-sm text-slate-800 block">Baso Aci Cecep</strong>
-                                    <span class="text-xs text-slate-500">Pedas nampol, topping sukro.</span>
+                                    <span class="text-xs text-slate-500">Pedas nampol, kuah panas.</span>
                                 </div>
                             </a>
                             <a href="https://www.google.com/maps/search/?api=1&query=Sate+Domba+Sari+Bahari" target="_blank" class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100 p-3 rounded border border-slate-200 transition">
@@ -346,7 +409,7 @@
                 <div class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-cyan-200">27</div>
                 <div>
                     <h2 class="text-2xl font-bold text-slate-800">Wisata Danau</h2>
-                    <p class="text-slate-500">Jumat • Pilih Sesuai Cuaca</p>
+                    <p class="text-slate-500">Sabtu • ☁️ Hujan Reda / Berawan</p>
                 </div>
             </div>
 
@@ -355,21 +418,22 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <h4 class="font-bold text-slate-800">Pilihan Destinasi Pagi</h4>
+                        <p class="text-xs text-slate-500 mb-2">Sabtu diprediksi lebih cerah dibanding hari sebelumnya (hujan ringan/berawan).</p>
                         <div class="mt-3 space-y-3">
                             <div class="bg-cyan-50 p-3 rounded-lg border border-cyan-100">
                                 <div class="flex justify-between items-center mb-1">
-                                    <strong class="text-cyan-900 text-sm">OPSI A: Talaga Bodas (Jika Cerah)</strong>
+                                    <strong class="text-cyan-900 text-sm">OPSI A: Talaga Bodas (Prioritas)</strong>
                                     <a href="https://www.google.com/maps/search/?api=1&query=Talaga+Bodas+Garut" target="_blank" class="text-cyan-600 hover:text-cyan-800"><i class="fas fa-map-marker-alt"></i></a>
                                 </div>
-                                <p class="text-xs text-cyan-800">Kawah vulkanik putih & air biru tosca. Pemandangan sangat bagus tapi jalan agak jauh.</p>
+                                <p class="text-xs text-cyan-800">Manfaatkan jeda hujan untuk melihat kawah putih. Bawa payung tetap.</p>
                             </div>
                             
                             <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
                                 <div class="flex justify-between items-center mb-1">
-                                    <strong class="text-slate-800 text-sm">OPSI B: Situ Bagendit (Jika Mendung)</strong>
+                                    <strong class="text-slate-800 text-sm">OPSI B: Situ Bagendit</strong>
                                     <a href="https://www.google.com/maps/search/?api=1&query=Situ+Bagendit+Garut" target="_blank" class="text-slate-500 hover:text-slate-700"><i class="fas fa-map-marker-alt"></i></a>
                                 </div>
-                                <p class="text-xs text-slate-600">Danau luas, bisa naik rakit bambu santai. Lokasi lebih dekat kota & aman.</p>
+                                <p class="text-xs text-slate-600">Alternatif jika cuaca mendung gelap.</p>
                             </div>
                         </div>
                     </div>
@@ -382,7 +446,7 @@
                     <div class="flex justify-between items-center bg-white p-3 rounded border border-orange-100">
                         <div>
                             <strong class="text-sm text-slate-800 block">Mie Bakso Parahyangan</strong>
-                            <span class="text-xs text-slate-500">Mie Yamin legendaris. Tekstur mie khas.</span>
+                            <span class="text-xs text-slate-500">Mie Yamin legendaris.</span>
                         </div>
                         <a href="https://www.google.com/maps/search/?api=1&query=Mie+Bakso+Parahyangan+Garut" target="_blank" class="text-orange-500 hover:text-orange-600"><i class="fas fa-location-arrow fa-lg"></i></a>
                     </div>
@@ -395,8 +459,8 @@
             <div class="flex items-center gap-4 mb-6">
                 <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">28</div>
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-800">Pulang & Antapura</h2>
-                    <p class="text-slate-500">Sabtu • Vibes Ubud di Garut</p>
+                    <h2 class="text-2xl font-bold text-slate-800">Pulang</h2>
+                    <p class="text-slate-500">Minggu • ⛅ Berawan</p>
                 </div>
             </div>
 
@@ -405,14 +469,14 @@
                     <div class="timeline-item">
                         <div class="timeline-dot secondary"></div>
                         <h4 class="font-bold text-slate-800">Check-out (10:00)</h4>
-                        <p class="text-sm text-slate-600">Perjalanan pulang arah Jakarta via jalur Cibiuk.</p>
+                        <p class="text-sm text-slate-600">Cuaca Minggu pagi diprediksi paling bersahabat (Berawan). Perjalanan pulang aman.</p>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-dot highlight"></div>
                         <h4 class="font-bold text-slate-800">Antapura De Djati</h4>
                         <p class="text-sm text-slate-600 mb-2">
-                            Tempat ngopi di tengah sawah terasering. Mirip Ubud Bali. Spot santai sebelum masuk tol.
+                            Tempat ngopi di tengah sawah terasering. Mirip Ubud Bali.
                         </p>
                         <a href="https://www.google.com/maps/search/?api=1&query=Antapura+De+Djati" target="_blank" class="btn-map primary">
                             <i class="fas fa-coffee"></i> Peta Lokasi
@@ -436,7 +500,7 @@
     <!-- Footer -->
     <div class="border-t border-slate-200 mt-12 py-8 text-center bg-white">
         <p class="text-slate-500 font-bold mb-1">Safe Travels!</p>
-        <p class="text-xs text-slate-400">Garut Family Itinerary</p>
+        <p class="text-xs text-slate-400">Garut Family Itinerary • 2025</p>
     </div>
 
 </body>
